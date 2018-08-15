@@ -1,11 +1,14 @@
 function ubahHuruf(kata) {
   var abcd = 'abcdefghijklmnoprstuvwxyz';
-  var hasil = ''
+  var hasil = '';
   for(var i = 0;i < kata.length ;i++){
       for(var j = 0; j < abcd.length;j++){
-          if(kata[i] === abcd[j]){
+        if(kata[i] === abcd[j] && abcd[j] === abcd[abcd.length-1]){
+            hasil+=abcd[0];
+        }else if(kata[i] === abcd[j]){
               hasil+=abcd[j+1]
-          }
+        }
+          
       }
   }
   return hasil
