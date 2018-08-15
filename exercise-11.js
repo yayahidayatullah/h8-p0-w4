@@ -4,6 +4,7 @@ function changeMe(arr) {
         console.log("")
     }
         for(var i = 0;i < arr.length;i++){
+            console.log([i+1] + '. ' + arr[i][0] + ' ' + arr[i][1] + ':')
             if(arr[i].length == 0){
             }
             if(arr[i].length >= 1){
@@ -26,7 +27,7 @@ function changeMe(arr) {
             }else{
                 a.age= 'Invalid Birth Year';
             }
-            console.log(a)
+            console.log(a);
         }
   }
   
