@@ -5,28 +5,16 @@ function changeMe(arr) {
     }
         for(var i = 0;i < arr.length;i++){
             console.log([i+1] + '. ' + arr[i][0] + ' ' + arr[i][1] + ':')
-            if(arr[i].length == 0){
-            }
-            if(arr[i].length >= 1){
-                a.firstName = arr[i][0]
-            }else{
-                a.firstName = 'Invalid First Name';
-            }    
-            if(arr[i].length >= 2){
-                a.lastName = arr[i][1]
-            }else{
-                a.lastName = 'Invalid Last Name';
-            }
-            if(arr[i].length >= 3){
-                a.gender = arr[i][2]
-            }else{
-                a.gender = 'Invalid Gender';
-            }    
-            if(arr[i].length >= 4){
-                a.age= (2018)-arr[i][3]; 
-            }else{
+            
+            a.firstName = arr[i][0],
+            a.lastName = arr[i][1],
+            a.gender = arr[i][2];
+            if(arr[i][3] >= 2018 || arr[i][3] == undefined){
                 a.age= 'Invalid Birth Year';
+            }else{
+                a.age= 2018-arr[i][3]; 
             }
+            
             console.log(a);
         }
   }
