@@ -1,15 +1,12 @@
 function totalDigitRekursif(angka) {
-    var ayam = String(angka)
-    if(ayam.length === 0){
-        return Number(ayam)
-    }else{
-        
-        var ind = ayam[0];
-        return Number(ind) + totalDigitRekursif(ayam.substring(1))
+    var angkaArray = String(angka);
+    var hasil = 0;
+    for(var i = 0;i < angkaArray.length;i++){
+        hasil+= Number(angkaArray[i])
     }
+    return hasil
     
-}
-
+  }
   
   // TEST CASES
   console.log(totalDigitRekursif(512)); // 8
