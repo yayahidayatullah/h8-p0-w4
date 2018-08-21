@@ -1,24 +1,14 @@
 function kaliTerusRekursif(angka) {
-    var angkaArray = String(angka);
-    var hasil = angkaArray[0];
-    for(var i = 1;i < angkaArray.length;i++){
-        hasil*= Number(angkaArray[i]);
-        if(hasil > 10){
-            hasil = String(hasil);
-            hasil = Number(hasil[0])*Number(hasil[1]);
-            if(hasil > 10){
-                hasil = String(hasil);
-                hasil = Number(hasil[0])*Number(hasil[1]);
-                if(hasil > 10){
-                    hasil = String(hasil);
-                    hasil = Number(hasil[0])*Number(hasil[1]);
-                }
-            }
-            
-        }
-
+    stringAngka = String(angka);
+    if(stringAngka.length === 1){
+        return Number(stringAngka)
+    }else{
+        var stringAngka2 = Number(stringAngka[0])*kaliTerusRekursif(stringAngka.substr(1));
     }
-    return hasil
+    if(String(stringAngka2).length > 1){
+        var stringAngka2 = kaliTerusRekursif(stringAngka2)
+    }
+    return stringAngka2
   }
   
   // TEST CASES
