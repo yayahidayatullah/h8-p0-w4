@@ -3,9 +3,8 @@ function totalDigitRekursif(angka) {
     if(angkaString.length === 0){
         return Number(angkaString)
     }else{
-        return Number(angkaString[0])+totalDigitRekursif(angkaString.substr(1))
-    }
-    
+        return Number(angkaString[0])+totalDigitRekursif(angkaString.substr(1));        
+    }    
   }
   
   // TEST CASES
