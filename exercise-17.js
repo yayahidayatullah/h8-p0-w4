@@ -1,10 +1,10 @@
 function totalDigitRekursif(angka) {
-    var angkaArray = String(angka);
-    var hasil = 0;
-    for(var i = 0;i < angkaArray.length;i++){
-        hasil+= Number(angkaArray[i])
+    angkaString = String(angka)
+    if(angkaString.length === 0){
+        return Number(angkaString)
+    }else{
+        return Number(angkaString[0])+totalDigitRekursif(angkaString.substr(1))
     }
-    return hasil
     
   }
   
